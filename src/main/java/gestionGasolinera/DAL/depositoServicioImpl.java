@@ -15,18 +15,20 @@ public class depositoServicioImpl implements depositoService {
 	public void llenarDeposito(deposito dp) {
 		// TODO Auto-generated method stub
 		em.persist(dp);
+		em.close();
 
 	}
 
-	public List<combustible> selectDepositos() {
+	public List<deposito> selectDepositos() {
 		// TODO Auto-generated method stub
-		return em.createQuery("SELECT depositos FROM dlk_gga_deposito depositos").getResultList();
+		return em.createQuery("SELECT depositos FROM deposito depositos").getResultList();
+		
 	}
 
 	public void borrarUltimoLLenado(deposito dp) {
 		// TODO Auto-generated method stub
 		em.remove(dp);
-
+		
 	}
 
 }

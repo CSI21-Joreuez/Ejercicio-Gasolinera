@@ -7,6 +7,10 @@ import javax.persistence.*;
 @Entity
 @Table(name="dlk_gga_deposito",schema="dlk_gga")
 public class deposito {
+	public deposito() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	
 	public int getId() {
 		return id;
@@ -15,6 +19,8 @@ public class deposito {
 	public void setId(int id) {
 		this.id = id;
 	}
+
+
 
 	public Calendar getFecha() {
 		return fecha;

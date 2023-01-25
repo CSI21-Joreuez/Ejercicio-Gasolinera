@@ -15,12 +15,12 @@
     <!-- Se activa el uso de anotaciones en las clases bean -->    
     <context:annotation-config></context:annotation-config>
     <!-- Se define en qué paquete están las clases que podrán tener anotaciones -->
-    <context:component-scan base-package="dao, impl, controlador"></context:component-scan>
+    <context:component-scan base-package="gestionGasolinera.DAL, impl, gestionGasolinera.controller"></context:component-scan>
         
     <!-- Se configura la configuración para la conexión a base de datos -->
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="org.postgresql.Driver"></property>    
-        <property name="url" value="jdbc:postgresql://localhost:5432/DIW/DWS"></property>
+        <property name="url" value="jdbc:postgresql://localhost:5432/bd_gestor_gasolinera"></property>
         <property name="username" value="postgres"></property>
         <property name="password" value="pr0f3s0r"></property>
     </bean>
@@ -28,7 +28,7 @@
     <!-- Configuración del JPA -->
     <bean id="entityManagerFactory" 
             class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
-            p:packagesToScan="dao"
+            p:packagesToScan="gestionGasolinera.DAL"
             p:dataSource-ref="dataSource"
             >
         <property name="jpaVendorAdapter">

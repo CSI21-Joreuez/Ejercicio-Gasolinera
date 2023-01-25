@@ -6,7 +6,7 @@ public interface depositoService {
 
 	public void llenarDeposito(deposito dp);
 
-	public List<combustible> selectDepositos();
+	public List<deposito> selectDepositos();
 	
 	public void borrarUltimoLLenado(deposito dp);
 

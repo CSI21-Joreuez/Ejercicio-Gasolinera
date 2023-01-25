@@ -12,6 +12,16 @@ public class combustible {
 		this.nombre = nombre;
 	}
 	
+	public combustible() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String toString() {
+		return "combustible [id=" + id + ", nombre=" + nombre + "]";
+	}
+
 	@Id
 	@Column(name="id",unique=true,nullable=false)
 	private int id;

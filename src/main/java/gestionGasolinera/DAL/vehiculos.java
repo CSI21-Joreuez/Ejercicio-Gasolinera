@@ -1,11 +1,19 @@
 package gestionGasolinera.DAL;
 
+import java.sql.Date;
 import java.util.Calendar;
 import javax.persistence.*;
 
 @Entity
 @Table(name="dlk_gga_vehiculos",schema="dlk_gga")
 public class vehiculos {
+
+	
+	
+	public vehiculos() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	@Id
 	@Column(name="id",unique=true,nullable=false)
@@ -14,16 +22,16 @@ public class vehiculos {
 	@Column(name="fecha",unique=false,nullable=false)
 	private Calendar fecha;
 	
-	@Column(name="dni",unique=true,nullable=false)
+	@Column(name="dni",unique=true,nullable=true)
 	private String dni;
 	
-	@Column(name="matricula",unique=true,nullable=false)
+	@Column(name="matricula",unique=true,nullable=true)
 	private String matricula;
 	
 	@Column(name="importe",unique=false,nullable=false)
 	private int importe;
 	
-	@Column(name="id_combustible",unique=false, nullable=false)
+	@Column(name="id_combustible",unique=false)
 	private int id_combustible;
 	
 	public int getId_combustible() {

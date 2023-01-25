@@ -19,7 +19,7 @@ public class vehiculosServicioImpl implements vehiculosService {
 
 	public List<vehiculos> selectVehiculos() {
 		// TODO Auto-generated method stub
-		return em.createQuery("SELECT vehiculos FROM dlk_gga_vehiculo vehiculos").getResultList();
+		return em.createQuery("SELECT vehiculos FROM vehiculos vehiculos").getResultList();
 	}
 
 }
